@@ -1,5 +1,5 @@
 # Learning_Log
-(Work in progress) This is a project I am building to make a log of completed coding challenges. 
+(Work in progress/formatting issues) This is a project I am building to make a log of completed coding challenges. 
 The goal is to keep track of the challenge, how I solved it, and what the best practice is. 
 Additionally, in the object created for each challenge, there is an array with methods or concepts that were valuable in solving the 
 challenge OR, if the best-practice utilized them. (some info duplicated below. Need to refine this README)
