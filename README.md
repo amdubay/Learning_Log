@@ -11,7 +11,7 @@ To clarify the action of each file >
 
 Class.js creates a Problem Class constructor. This file also contains a template to copy/paste into Data.js to create a 'New Problem()'.
 
-Data.js is all about creating new Problem Objects  Aside: (need to clarify if each 'New Problem()' is considered an Object)
+Data.js is all about creating new Problem Objects  -sidenote: (need to clarify if each 'New Problem()' is considered an Object)
   There are a few things that will not work in the current format, including, but not limited to:
       -Unable to use `` in test, solution, or best practice code.
       -Unable to use "" in strings for each different class constructor argument.
