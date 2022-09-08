@@ -1,16 +1,21 @@
 
 
 class Problem {
-        constructor(title, url, instructions, mySolution, match, bestPractice, comments, methods) {
+        constructor(id, title, url, instructions, testCode, mySolution, match, bestPractice, comments, methods) {
+          this._id = id;
           this._title = title;
           this._url = url;
           this._instructions = instructions;
+          this._testCode = testCode;
           this._mySolution = mySolution;
           this._match = match;
           this._bestPractice = bestPractice;
           this._comments = comments;
           this._methods = methods;
 
+        }
+        get id() {
+                return this._id;
         }
         get title() {
           return this._title;
@@ -20,6 +25,9 @@ class Problem {
         }
         get instructions() {
                 return this._instructions;
+        }
+        get testCode() {
+                return this._testCode;
         }
         get mySolution() {
                 return this._mySolution;
@@ -44,8 +52,11 @@ module.exports.Problem = Problem;
 
 /* Template for adding a new problem class
 
-const --- = new Problem(
-       //Title: 
+const --- = new cl.Problem(
+        // ID:
+        "",
+       
+        //Title: 
        "",
 
        // URL:
@@ -54,13 +65,24 @@ const --- = new Problem(
        // Instructions:
        "",
 
-       // My solution code
+       // The Test Code
        function myFunction() {console.log(
-       `
-       function even_or_odd(number) {
-        return number % 2 ? "Odd" : "Even" }`
+        `
+        describe("Sample tests",() => {
+            
+        it("2 is even", () => {
+        assert.strictEqual(even_or_odd(2), "Even");`
+         
+         )},
         
-        )},
+        
+        // My solution code
+       function myFunction() {console.log(
+        `
+        function even_or_odd(number) {
+         return number % 2 ? "Odd" : "Even" }`
+         
+         )},
 
 
 
