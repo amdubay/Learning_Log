@@ -52,6 +52,8 @@ module.exports.Problem = Problem;
 
 /* Template for adding a new problem class
 
+// *****************************
+
 const --- = new cl.Problem(
         // ID:
         "",
@@ -65,7 +67,7 @@ const --- = new cl.Problem(
        // Instructions:
        "",
 
-       // The Test Code
+       // The Test Code *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
        function myFunction() {console.log(
         `
         describe("Sample tests",() => {
@@ -76,7 +78,7 @@ const --- = new cl.Problem(
          )},
         
         
-        // My solution code
+        // My solution code *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
        function myFunction() {console.log(
         `
         function even_or_odd(number) {
@@ -91,6 +93,7 @@ const --- = new cl.Problem(
 
 
        // If #7 is 'No', copy of best-practice solution code. If available
+       // *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
        function bestFunction() {console.log(
         `
         function even_or_odd(number) {

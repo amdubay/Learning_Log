@@ -7,14 +7,14 @@ const data = require('./Data.js')
 //const search = "Ternary Operator"
 
 const locate  = search => {
-
+    let count = 1;
     for (i = 0; i < data.problems.length; i++) {
       //console.log("in i loop")
-      let methods = data.problems[i].methods
-      for (c = 0; c < methods.length; c++) {   
-          if (methods[c] === search) {
+      let met = data.problems[i].methods
+      for (c = 0; c < met.length; c++) {   
+          if (met[c] === search) {
             console.log(" ")
-            console.log("************   " + (i+1) + ".   ************")
+            console.log("************   " + (count) + ".   ************")
             console.log(" ")
             console.log("Match found! Problem that uses " + search + ":")
             console.log(" ")
@@ -37,8 +37,9 @@ const locate  = search => {
             console.log("Best Practice Solution: ")
             data.problems[i].bestPractice()
             console.log(" ")
-            console.log("Related Methods/concepts: " + data.problems[i].methods)
+            console.log("Related Methods/concepts: " + met.join(", "))
             console.log(" ")
+            count ++
           }
       } 
     }
