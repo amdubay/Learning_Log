@@ -83,7 +83,7 @@ const b1 = new cl.Problem(
      "Used Ternary Operator",
 
     // What logic is used in the best-practice/better solution code?
-    ["Ternary Operator", "Testing"]
+    ["Ternary Operator", "Remainder", "Testing"]
 
    )
 problems.push(b1)
@@ -156,7 +156,7 @@ const b2 = new cl.Problem(
   "My solution mostly matched the best-practice solution. In operation, it is identical. However, I learned that the fromIndex, in Array.indexOf(searchElement, fromIndex) is not required, if set to 0.",
 
  // What logic is used in the best-practice/better solution code?
- [".indexOf", "Formatting", "Testing"]
+ [".indexOf", "Formatting", "Array", "Testing"]
 
 )
 problems.push(b2)
@@ -242,7 +242,7 @@ const b3 = new cl.Problem(
   "My solution mostly matched best-practice, but even when I thought I was finding a clean way to solve this very easy kata, was reminded there is an easier way. return(-number) vs number*(-1)",
 
  // What logic is used in the best-practice/better solution code?
- ["Formatting", "Operations", "Testing"]
+ ["Formatting", "Operators", "Testing"]
 
 )
 problems.push(b3)
@@ -319,8 +319,188 @@ problems.push(b4)
 
 
 
+// *****************************
+
+const b5 = new cl.Problem(
+  // ID:
+  "b5",
+ 
+  //Title: 
+ "1480. Running Sum of 1d Array",
+
+ // URL:
+ "https://leetcode.com/problems/running-sum-of-1d-array/", 
+
+ // Instructions:
+ "Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]). Return the running sum of nums.",
+
+ // The Test Code *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
+ function myFunction() {console.log(
+  `
+  Example 1:
+  Input: nums = [1,2,3,4]
+  Output: [1,3,6,10]
+  Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
+
+  Example 2:
+  Input: nums = [1,1,1,1,1]
+  Output: [1,2,3,4,5]
+  Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].
+
+  Example 3:
+  Input: nums = [3,1,2,10,1]
+  Output: [3,4,6,16,17]
+`
+   
+   )},
+  
+  
+  // My solution code *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
+ function myFunction() {console.log(
+  `
+  const runningSum = function(nums) {
+    let rSum = [nums[0]]
+    for (i=1; i<nums.length; i++) {
+        rSum.push(rSum[i-1]+nums[i])
+    }
+    return rSum
+  };`
+   
+   )},
 
 
+
+ // Does my solution match the best-practice solution, or otherwise better solutions?
+ "No", 
+
+
+ // If #7 is 'No', copy of best-practice solution code. If available
+ // *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
+ function bestFunction() {console.log(
+  `
+  var runningSum = function (nums) { 
+    let val = 0
+    let sum = nums.map(res=>{
+        return val = res + val
+    })
+    return sum
+   };`
+   
+   )},
+
+
+ //If #7 is 'No', Provide a comment/summary on the best-practice solution vs my solution.
+       // Comments/Summary may include; Difference's and similarities between solutions, Functions, logic, modules, etc. that best-practice used, that I didn't 
+       // and why it makes more sense to use them.
+
+  "Using .map is always nice.",
+
+ // What logic is used in the best-practice/better solution code?
+ [".map", "Array", "Testing"]
+
+)
+problems.push(b5)
+
+
+
+// *****************************
+
+const b6 = new cl.Problem(
+  // ID:
+  "b6",
+ 
+  //Title: 
+ "Find Pivot Index",
+
+ // URL:
+ "https://leetcode.com/problems/find-pivot-index/", 
+
+ // Instructions:
+ "Given an array of integers nums, calculate the pivot index of this array. The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right. If the index is on the left edge of the array, then the left sum is 0 because there are no elements to the left. This also applies to the right edge of the array. Return the leftmost pivot index. If no such index exists, return -1.",
+
+ // The Test Code *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
+ function myFunction() {console.log(
+  `
+  Example 1:
+  Input: nums = [1,7,3,6,5,6]
+  Output: 3
+  Explanation:
+  The pivot index is 3.
+  Left sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11
+  Right sum = nums[4] + nums[5] = 5 + 6 = 11
+
+  Example 2:
+  Input: nums = [1,2,3]
+  Output: -1
+  Explanation:
+  There is no index that satisfies the conditions in the problem statement.
+  
+  Example 3:
+  Input: nums = [2,1,-1]
+  Output: 0
+  Explanation:
+  The pivot index is 0.
+  Left sum = 0 (no elements to the left of index 0)
+  Right sum = nums[1] + nums[2] = 1 + -1 = 0
+  
+
+  Constraints:
+
+  1 <= nums.length <= 104
+  -1000 <= nums[i] <= 1000`
+   
+   )},
+  
+  
+  // My solution code *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
+ function myFunction() {console.log(
+  `
+  // concept - total sum of the array, minus the pivot index, minus the runningSum(loop start at index 0) should be equal to the runningSum.
+ const pivotIndex = nums => {
+    let totalSum = 0;
+    let runningSum = 0;
+    nums.forEach(element => totalSum += element); // this will give total of all numbers in array.
+
+    for (i=0; i<nums.length; i++) {
+        if (totalSum - nums[i] - runningSum === runningSum) {
+            return i;
+        }
+        runningSum += nums[i];
+    }
+    return -1
+  };`
+   
+   )},
+
+
+
+ // Does my solution match the best-practice solution, or otherwise better solutions?
+ "Yes", 
+
+
+ // If #7 is 'No', copy of best-practice solution code. If available
+ // *** (Insert code after the console.log(`   but before the closing `)}, *** Delete all 'placeholder' code in between.
+ function bestFunction() {console.log(
+  `
+  //Some solutions use .reduce to calculate the totalSum
+  for example:
+  const pivotIndex = function(nums) {
+    let sum = nums.reduce((num,curr,index)=>(num+curr),0);`
+   
+   )},
+
+
+ //If #7 is 'No', Provide a comment/summary on the best-practice solution vs my solution.
+       // Comments/Summary may include; Difference's and similarities between solutions, Functions, logic, modules, etc. that best-practice used, that I didn't 
+       // and why it makes more sense to use them.
+
+  "",
+
+ // What logic is used in the best-practice/better solution code?
+ [".reduce", ".forEach",]
+
+)
+problems.push(b6)
 
 
 
