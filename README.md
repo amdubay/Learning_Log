@@ -16,7 +16,7 @@ Data.js is all about creating new Problem Objects
     -Unable to use `` in test, solution, or best practice code.
     -Unable to use "" in strings for each different class constructor argument.
     
-    The problem object includes a title, various solution codes, and most importantly, 'tags' (as mentioned in the introduction) of concepts/methods that were valuable in solving the challenge or were discovered by reviewing the best-practice solution.
+  The problem object includes a title, various solution codes, and most importantly, 'tags' (as mentioned in the introduction) of concepts/methods that were valuable in solving the challenge or were discovered by reviewing the best-practice solution.
       
 App.js - This is the file to initiate, built to run in Node.js. This file currently is built to search all Problem Objects for desired concept/method 'tag'.
 
