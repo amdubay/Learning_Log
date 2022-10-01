@@ -13,10 +13,10 @@ Class.js creates a Problem Class constructor. This file also contains a template
 
 Data.js is all about creating new Problem Objects 
   There are a few things that will not work in the current format, including, but not limited to:
-      -Unable to use `` in test, solution, or best practice code.
-      -Unable to use "" in strings for each different class constructor argument.
-      
-      The problem object includes a title, various solution codes, and most importantly, 'tags' (as mentioned in the introduction) of concepts/methods that were valuable in solving the challenge or were discovered by reviewing the best-practice solution.
+    -Unable to use `` in test, solution, or best practice code.
+    -Unable to use "" in strings for each different class constructor argument.
+    
+    The problem object includes a title, various solution codes, and most importantly, 'tags' (as mentioned in the introduction) of concepts/methods that were valuable in solving the challenge or were discovered by reviewing the best-practice solution.
       
 App.js - This is the file to initiate, built to run in Node.js. This file currently is built to search all Problem Objects for desired concept/method 'tag'.
 
