@@ -20,13 +20,12 @@ Data.js is all about creating new Problem Objects
       
 App.js - This is the file to initiate, built to run in Node.js. This file currently is built to search all Problem Objects for desired concept/method 'tag'.
 
-        in command line: node App.js "type in tag to search"
-        This will return information about problems that were solved with that tag. 
-        The benefit here is that I can review other problems where this concept/method was used as an aid to learning and programming.
-        
-        - Currently the input search argument is case-sensitive. argument needs to exactly match the 'tag'
-        - Future revisions will include the ability to pass a 'help' arguement, and the ability to request a list of all 'tags' from all Problems.
+  in command line: node App.js "type in tag to search"
+  This will return information about problems that were solved with that tag. 
+  The benefit here is that I can review other problems where this concept/method was used as an aid to learning and programming.
+    - Currently the input search argument is case-sensitive. argument needs to exactly match the 'tag'
+    - Future revisions will include the ability to pass a 'help' arguement, and the ability to request a list of all 'tags' from all Problems.
 
 -Future revisions overall (in addition to the revisions mentioned specifically to App.js) are:
-        - Set up a database to contain the Data, instead of using a Data.js file. Since the original writing of this README(9/8/2022), I have learned the basics of using an SQL database, including accessing the database, tables, and fields from within a JavaScript file via node. I will create an issue on the repository to add this feature.
-        - In the interim, prior to setting up a database, I may opt to create a 'template' function. Whereby, instead of copy/pasting the template and editing directly in the data.js file, I'd be walked through the process (like a 'wizard'), and it will output the 'New Problem()' code, at which point, I just copy/paste to the Data.js file. (9/30/2022: per above note regarding SQL, I will not be exploring this interim step. However, I will keep this note here until the database is implemented.)
+  - Set up a database to contain the Data, instead of using a Data.js file. Since the original writing of this README(9/8/2022), I have learned the basics of using an SQL database, including accessing the database, tables, and fields from within a JavaScript file via node. I will create an issue on the repository to add this feature.
+  - In the interim, prior to setting up a database, I may opt to create a 'template' function. Whereby, instead of copy/pasting the template and editing directly in the data.js file, I'd be walked through the process (like a 'wizard'), and it will output the 'New Problem()' code, at which point, I just copy/paste to the Data.js file. (9/30/2022: per above note regarding SQL, I will not be exploring this interim step. However, I will keep this note here until the database is implemented.)
