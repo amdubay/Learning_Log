@@ -1,6 +1,6 @@
 # Learning_Log
 Introduction:
-This project is a running log of completed coding challenges. 
+This project is a running log of completed coding challenges. It is meant as an aid to learning to program.
 The goal is to keep track of the challenge, how I solved it, and what the best practice is. 
 Additionally, in the object created for each challenge, there is an array with methods or concepts that were valuable in solving the 
 challenge or were discovered by reviewing the best-practice solution.
